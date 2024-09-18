@@ -1,0 +1,129 @@
+/* Contenedor principal para la lista de cursos */
+.rowCP {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente fila si no hay suficiente espacio */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: flex-start; /* Alineación de las tarjetas hacia la izquierda */
+    padding: 10px; /* Espaciado interno del contenedor */
+}
+
+/* Columna para el diseño de los cursos */
+
+
+/* Estilo para cada tarjeta de curso */
+.cardCursoProfe {
+    position: relative; /* Permite el uso de `position: absolute` en los elementos hijos */
+    width: 200px; /* Ancho fijo de la tarjeta */
+    height: 150px; /* Altura fija de la tarjeta */
+    background: linear-gradient(135deg, #E0E0E2, #B5BAD0, #7389AE);
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Uso de Flexbox para centrar el contenido */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    overflow: hidden; /* Oculta cualquier contenido que desborde el contenedor */
+    perspective: 1000px; /* Perspectiva para efectos 3D */
+    box-shadow: 0 4px 8px #000022; /* Contorno suave de color personalizado */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición suave para los cambios de estilo */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+}
+
+/* Contenedor de la imagen y el título */
+.cardProfe__image-container {
+    position: relative; /* Para posicionar el título sobre la imagen */
+    width: 100%; /* Ancho completo de la tarjeta */
+    height: 100%; /* Altura completa de la tarjeta */
+}
+
+
+.cardProfe-img-top {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 100%; /* La imagen ocupa todo el alto de la tarjeta */
+    object-fit: cover; /* La imagen se ajusta sin distorsión */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición suave para los cambios de estilo */
+}
+
+.cardProfe__image-container {
+    position: relative; /* Necesario para posicionar el título de manera absoluta dentro de este contenedor */
+}
+
+.cardProfe__image-container h3 {
+    position: absolute; /* Posiciona el título sobre la imagen */
+    bottom: 10px; /* Ubicado en la parte inferior de la imagen */
+    left: 5px; /* Margen desde la izquierda */
+    color: #000022; /* Color blanco para el título */
+    font-size: 12px; /* Tamaño de fuente */
+    font-weight: 500; /* Negrita */
+    background: rgba(248, 244, 244, 0.682); /* Fondo semitransparente para el título */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    animation: marquee 8s linear infinite; /* La animación se repite indefinidamente */
+    
+}
+
+@keyframes marquee { /* @keyframes en CSS se utiliza para definir una animación*/
+    0% { /* El estado inicial */
+        transform: translateX(90%);
+    }
+    100% {
+        transform: translateX(-90%);
+    }
+}
+
+.cardCursoProfe img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 100%; /* La imagen ocupa todo el alto de la tarjeta */
+    object-fit: cover; /* La imagen se ajusta sin distorsión */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición suave para los cambios de estilo */
+}
+
+.cardCursoProfe:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la tarjeta al pasar el ratón */
+    box-shadow: 0 4px 8px #000022; /* Sombra más pronunciada al hacer hover */
+}
+
+.cardProfe__content {
+    position: absolute; /* Posiciona el contenido sobre la imagen */
+    top: 0; /* Empieza desde la parte superior */
+    left: 0; /* Empieza desde la parte izquierda */
+    width: 100%; /* El contenido ocupa todo el ancho de la tarjeta */
+    height: 100%; /* El contenido ocupa todo el alto de la tarjeta */
+    padding: 15px; /* Espaciado interno del contenido */
+    box-sizing: border-box; /* Incluye el padding en las dimensiones del contenido */
+    background: linear-gradient(135deg, #E0E0E2, #B5BAD0, #7389AE);
+    transform: rotateX(-90deg); /* El contenido empieza rotado (invisible) */
+    transform-origin: bottom; /* El punto de origen de la rotación es la parte inferior */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición suave para la rotación */
+    display: flex; /* Uso de Flexbox para centrar el contenido */
+    flex-direction: column; /* El contenido se organiza en columna */
+    align-items: center; /* Centrado horizontal del contenido */
+    justify-content: center; /* Centrado vertical del contenido */
+    text-align: center; /* Texto centrado */
+    opacity: 0; /* Oculta el contenido inicialmente */
+}
+
+.cardCursoProfe:hover .cardProfe__content {
+    transform: rotateX(0deg); /* Al hacer hover, el contenido se rota a su posición original */
+    opacity: 1; /* Muestra el contenido al hacer hover */
+}
+
+.cardProfe__title {
+    margin: 0; /* Sin margen superior o inferior */
+    font-size: 18px; /* Tamaño de fuente más pequeño para el título */
+    color: #000022; /* Color del texto */
+    font-weight: 700; /* Negrita */
+}
+
+.cardProfe__matriculas {
+    margin: 5px 0 0; /* Espaciado superior mínimo */
+    font-size: 12px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #000022; /* Color de la descripción */
+    line-height: 1.2; /* Espaciado entre líneas más compacto */
+    display: block;
+}
+
+.cardCursoProfe:hover img {
+    transform: scale(0); /* La imagen se reduce a cero al hacer hover */
+}

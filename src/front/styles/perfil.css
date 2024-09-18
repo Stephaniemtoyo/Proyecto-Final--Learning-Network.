@@ -1,0 +1,13 @@
+.imagen2 img{
+    height: 200px;
+    width: 200px;
+    margin-top: 60px;
+    margin-left: -100px;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.nombrePersona{
+    margin-top: 10px ;
+    margin-left: 20px;
+}
