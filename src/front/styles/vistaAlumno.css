@@ -1,0 +1,135 @@
+/* Contenedor principal del alumno */
+.contenedor_Alumno {
+    display: flex;
+    flex-direction: column;
+    height: 25vh; /* Ocupa toda la altura de la ventana */
+    background-color: #416788; /* Color de fondo para la sección superior */
+}
+
+/* Contenedor para la sección superior */
+.seccionSuperiorAlumno {
+    flex: 1; /* Toma toda la altura del contenedor principal */
+    padding: 20px;
+    background: linear-gradient(to bottom, #000022, #333366, #416788);
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es demasiado largo */
+}
+
+/* Estilos para la sección superior */
+.seccionSuperiorAlumno h4 {
+    color: #e0e0e0; /* Color del texto para todo el <h4> */
+}
+
+/* Estilo para el perfil del alumno */
+.perfilAlumno {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.fotoAlumno-perfil {
+    width: 80px; /* Tamaño de la imagen del perfil */
+    height: 80px; /* Tamaño de la imagen del perfil */
+    border-radius: 50%; /* Hacer la imagen circular */
+    margin-right: 15px;
+    border: 1px solid #000022; /* Borde oscuro */
+    box-shadow: 0 0 15px rgba(198, 198, 205, 0.772); /* Sombra con tono oscuro */
+}
+
+/* Estilo para los cursos */
+.cursosAlumno {
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Lista de cursos */
+.lista-grupo {
+    list-style: none;
+    padding: 0;
+}
+
+/* Elementos de la lista */
+.lista-grupo-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en los elementos de la lista */
+.lista-grupo-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sección de cursos del alumno */
+.cursos_alumnos {
+    padding: 20px;
+    background-color: #e0e0e0; /* Color de fondo para la sección de cursos del alumno */
+    flex: 1; /* Permite que esta sección tome el espacio restante disponible */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
+.btnToggleBarraBusquedaAlumno {
+    background-color: #416788; /* Color de fondo específico */
+    color: #E0E0E2; /* Color de texto específico */
+    padding: 8px 16px; /* Espaciado interno reducido */
+    border: none; /* Sin bordes */
+    border-radius: 6px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    display: block; /* Hace que el botón ocupe una línea completa */
+    margin: 20px 0; /* Espaciado superior e inferior */
+    margin-left: 0; /* Alinea el botón a la izquierda */
+}
+
+.btnToggleBarraBusquedaAlumno:hover {
+    background-color: #5a6a8e; /* Color más oscuro para hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.btnToggleBarraBusquedaAlumno:active {
+    background-color: #4a5b78; /* Color más oscuro cuando se hace clic */
+    transform: scale(0.98); /* Efecto de compresión */
+}
+
+
+.barraBusquedaYListaCurso{
+    width: 30px; /* Ancho reducido */
+    height: 30px; /* Altura reducida */
+
+}
+/* Ajuste de tamaño de tarjetas en la barra de búsqueda */
+.barraBusquedaYListaCursos .cardCursoAlumno {
+    width: 30px; /* Ancho reducido */
+    height: 30px; /* Altura reducida */
+    margin: 5px; /* Espacio entre las tarjetas */
+}
+
+/* Ajuste de la imagen de la tarjeta */
+.barraBusquedaYListaCursos .cardCursoAlumno img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 60%; /* Altura ajustada */
+    object-fit: cover; /* La imagen se ajusta sin distorsión */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+/* Ajuste del contenido de la tarjeta */
+.barraBusquedaYListaCursos .cardCursoAlumno .cardAlumno__content {
+    padding: 10px; /* Espaciado interno reducido */
+}
+
+/* Estilo del título y descripción */
+.barraBusquedaYListaCursos .cardCursoAlumno .cardAlumno__title {
+    font-size: 12px; /* Tamaño de fuente reducido para el título */
+}
+
+.barraBusquedaYListaCursos .cardCursoAlumno .cardAlumno__description {
+    font-size: 10px; /* Tamaño de fuente reducido para la descripción */
+}
+
+/* Añadir margen sobre el footer para la lista de cursos */
+.cursos_alumnos::after {
+    content: ""; /* Asegura que el margen se aplique correctamente */
+    display: block;
+    height: 60px; /* Ajusta esta altura para el margen sobre el footer */
+}
