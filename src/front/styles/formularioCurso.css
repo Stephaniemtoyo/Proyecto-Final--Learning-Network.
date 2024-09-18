@@ -1,0 +1,134 @@
+/* Estilos para el formulario */
+.formularioCurso {
+    width: 100%; /* El formulario ocupa todo el ancho del modal */
+    max-width: 100%; /* Asegúrate de que no exceda el tamaño del modal */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 1.5rem; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #E0E0E2; /* Color de fondo */
+    box-shadow: 0 4px 8px #000022; /* Sombra */
+    overflow-y: auto; /* Habilitar desplazamiento si el contenido es demasiado largo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+}
+
+/* Estilo del título h1 dentro del formulario */
+.formularioCurso h1 {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    font-weight: bold; /* Negrita para el título */
+    color: #000022; /* Color oscuro para el texto del título */
+    text-align: center; /* Centra el título */
+    margin: 0; /* Elimina los márgenes exteriores para reducir el espacio */
+    padding-bottom: 0; /* Elimina el espaciado inferior para la línea decorativa */
+}
+
+/* Estilo de los labels */
+label {
+    display: block; /* El label ocupa toda la línea */
+    margin-bottom: 16px; /* Margen inferior para separar los campos */
+    font-weight: bold;
+    color: #000022; /* Color de texto más suave y legible */
+}
+
+/* Estilo de los campos de entrada y textarea */
+input.form-control, 
+textarea.form-control, 
+.dropdown-toggle {
+    width: 100%; /* El ancho del campo es del 100% del contenedor padre */
+    padding: 12px; /* Espaciado interno más amplio para mejor usabilidad */
+    margin-top: 5px; /* Margen superior para separar del label */
+    border: 1px solid #000022; /* Borde suave */
+    border-radius: 4px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 2px #000022; /* Sombra con el color específico #000022 */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #000022; /* Color del texto */
+}
+
+/* Estilo del texto secundario */
+.text-secondary {
+    color: #666; /* Color de texto gris suave */
+    font-size: 14px; /* Tamaño de fuente más legible */
+    margin-top: 5px; /* Margen superior para separar del campo anterior */
+}
+
+/* Estilo del dropdown */
+.dropdown-toggle {
+    background-color: #E0E0E2; /* Fondo blanco para el dropdown */
+    color: #416788; /* Color del texto */
+    border: 1px solid #000022; /* Borde suave */
+    border-radius: 4px; /* Esquinas redondeadas */
+    padding: 12px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Elimina el fondo azul predeterminado cuando se selecciona o hace clic */
+.dropdown-toggle:focus, 
+.dropdown-toggle:active, 
+.dropdown-toggle.show {
+    background-color: #416788 !important; /* Mantén el color de fondo personalizado */
+    color: #E0E0E2 !important; /* Mantén el color del texto personalizado */
+    border-color: #000022 !important; /* Mantén el color del borde personalizado */
+}
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+    background-color: #E0E0E2; /* Fondo blanco del menú */
+    border: 1px solid #000022; /* Borde suave del menú */
+}
+
+/* Estilo de los elementos del dropdown */
+.dropdown-item {
+    padding: 12px; /* Espaciado interno */
+    color: #416788; /* Color del texto */
+}
+
+/* Hover en los elementos del dropdown */
+.dropdown-item:hover {
+    background-color: #E0E0E2; /* Fondo gris claro */
+}
+
+/* Estilo del input de rango */
+input[type="range"] {
+    width: 100%; /* El control de rango ocupa todo el ancho disponible */
+    accent-color: #416788; /* Color principal para el control */
+    margin-top: 10px; /* Margen superior para separar del label */
+}
+
+/* Estilo del span que muestra el valor del precio */
+.precio-span {
+    display: block; /* El span ocupa toda la línea */
+    margin-top: 5px; /* Margen superior para separar del control de rango */
+    font-weight: bold; /* Texto en negrita */
+    color: #416788; /* Color principal */
+}
+
+/* Estilo del botón de envío */
+input.btnFormulario {
+    background-color: #416788; /* Color de fondo específico */
+    color: #E0E0E2; /* Color de texto específico */
+    padding: 12px 24px; /* Espaciado interno aumentado */
+    border: none; /* Sin bordes */
+    border-radius: 6px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    font-size: 16px; /* Tamaño de fuente adecuado */
+    display: block; /* Hace que el botón ocupe una línea completa */
+    margin: 25px auto; /* Centra el botón horizontalmente */
+}
+
+/* Hover en el botón de envío */
+input.btnFormulario:hover {
+    background-color: #5a6a8e; /* Color más oscuro para hover */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Efecto activo (clic) */
+input.btnFormulario:active {
+    background-color: #4a5b78; /* Color más oscuro cuando se hace clic */
+    transform: scale(0.98); /* Efecto de compresión */
+}
+
+/* Estilo cuando está enfocado (selección por teclado) */
+input.btnFormulario:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    box-shadow: 0 4px 8px #000022; /* Contorno suave de color personalizado */
+}
